@@ -32,6 +32,9 @@
 29. Founder Foreword
 30. Governed-Intelligence OS Abstract
 31. Table of Contents
+32. Acquisition Q&A Appendix
+33. Reviewer Interview Packet
+34. Governance Substrate Glossary
 
 Supporting records:
 - `evidence/`

@@ -8,9 +8,10 @@
 05. Eight-Plane Architecture
 06. Authority Model
 07. Structural Validation Matrix
-08. Authority Flow
-09. Threat Model
-10. Multi-Vector Attack Analysis
+08. Migration Chapter
+09. Authority Flow
+10. Threat Model
+11. Multi-Vector Attack Analysis
 11. Developer Mental Model
 12. Governed Transition Example
 13. Verification

@@ -19,20 +19,31 @@ This is the clean acquisition-facing surface. It is curated rather than a mirror
 06 Authority Model
 07 Structural Validation Matrix
 08 Migration Chapter
-09 Authority Flow
-10 Threat Model
-11 Multi-Vector Attack Analysis
-11 Developer Mental Model
-12 Governed Transition Example
-13 Verification
-14 Diligence
-15 IP and Product Boundary
-16 Chromium Edition
-
-Subsystem specifications: 17 Commander OS, 18 Cranium AI, 19 Synapse, 20 Kernel, 21 Miracle Memory, 22 Circuit Breaker / COMA, 23 Constitution, 24 Receipts / Attestation.
+09 Acquisition Readiness Chapter
+10 External Reviewer Brief
+11 OS-Grade Summary Sheet
+12 Authority Flow
+13 Threat Model
+14 Multi-Vector Attack Analysis
+15 Developer Mental Model
+16 Governed Transition Example
+17 Verification
+18 Diligence
+19 IP and Product Boundary
+20 Chromium Edition
+21 Commander OS
+22 Cranium AI
+23 Synapse
+24 Kernel
+25 Miracle Memory
+26 Circuit Breaker / COMA
+27 Constitution
+28 Receipts / Attestation
+29 Founder Foreword
+30 Governed-Intelligence OS Abstract
+31 Table of Contents
 
 ## Evidence and Provenance
-
 - `evidence/verification-records/` contains exact diligence records.
 - `evidence/AUDIT-EVIDENCE.md` records acquisition audit context.
 - `provenance/` contains engineering history and architectural origin.

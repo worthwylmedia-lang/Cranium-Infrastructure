@@ -35,6 +35,9 @@
 32. Acquisition Q&A Appendix
 33. Reviewer Interview Packet
 34. Governance Substrate Glossary
+35. Binder Finalization Checklist
+36. Governance Substrate Whitepaper
+37. OS Architecture Poster
 
 Supporting records:
 - `evidence/`

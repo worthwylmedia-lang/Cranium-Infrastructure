@@ -127,3 +127,40 @@ This binder intentionally distinguishes:
 - **Not claimed:** explicitly outside the evidence established here.
 
 No claim of invulnerability, certification, independent security audit, market validation, or completed ChromiumOS production release is made by this binder.
+
+## Public Front Door / Production System of Record
+
+This repository is the primary public architecture and acquisition binder for Convertible Cranium. It is intentionally a **curated public front door, not a second production implementation**.
+
+The authoritative production system remains under [`worthwyl2022-cloud`](https://github.com/worthwyl2022-cloud). This account explains and directs; the production account implements and proves.
+
+### Production mapping
+
+| Public architecture concept | Authoritative production surface |
+|---|---|
+| Canonical authority | [`cranium-kernel`](https://github.com/worthwyl2022-cloud/cranium-kernel) |
+| Evidence / attestation | [`cranium-synapse`](https://github.com/worthwyl2022-cloud/cranium-synapse) |
+| Cognitive proposal | [`cranium-ai`](https://github.com/worthwyl2022-cloud/cranium-ai) |
+| Commander / operator surface | [`cranium-ultra-platform`](https://github.com/worthwyl2022-cloud/cranium-ultra-platform) |
+| Verification / diligence | [`cranium-diligence-workbench`](https://github.com/worthwyl2022-cloud/cranium-diligence-workbench) |
+| Appliance delivery | [`cranium-boot-drive`](https://github.com/worthwyl2022-cloud/cranium-boot-drive) |
+| Acquisition demonstration | [`cranium-acquisition-demo-drive`](https://github.com/worthwyl2022-cloud/cranium-acquisition-demo-drive) |
+| Historical lineage | [`cranium-archive`](https://github.com/worthwyl2022-cloud/cranium-archive) |
+
+## Cranium Commander Boundary
+
+**Cranium Commander is the operational control surface, not the canonical authority source.**
+
+Commander may present system state, construct proposals, orchestrate governed workflows, submit authority requests, and participate in runtime safety and continuity. It does not create canonical authority, replace the Kernel, redefine constitutional truth, or become an independent system of record.
+
+The production Commander/operator implementation is mapped through `worthwyl2022-cloud/cranium-ultra-platform`.
+
+The governing distinction is:
+
+> **Cognition may come from anywhere. Authority comes only through Cranium.**
+
+## Public Evidence Status
+
+This binder distinguishes **Verified**, **Self-attested**, **Pending**, and **Not claimed** material. Public architecture descriptions are not treated as independent verification merely because they are documented here.
+
+Private credentials, keys, sensitive media, private contracts, and unsupported production/security claims remain outside this public surface.

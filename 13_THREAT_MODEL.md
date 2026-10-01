@@ -142,6 +142,16 @@ These target continued operation and recovery:
 
 - Resource exhaustion
 
+## 8.1 Cryptographic custody limitation
+
+The current Wave V hardening adds an in-process HMAC custody proof to the tested canonical CORE signing path. This raises the bar above possession of a trusted Ed25519 private key alone, but it is **not an HSM, hardware-backed key boundary, secure enclave, TPM-backed signer, or remote process attestation system**.
+
+The custody key is generated and held in application process memory. A process compromise that can control the canonical signing process may therefore be able to operate within the same trust boundary. Restart continuity for this custody secret is a separate design concern and must not be represented as durable external custody.
+
+Production-grade deployment should place high-value signing and custody material behind an external HSM/KMS, hardware-backed signer, or appropriately attested custody service, with explicit lifecycle, rotation, revocation, and recovery evidence.
+
+The current evidence therefore supports the narrower statement: **the tested canonical custody path rejects a valid CORE signature that lacks the required process-local custody proof.** It does not support a claim that stolen key material is useless under all deployment conditions.
+
 ## 12. Multi-vector attack and cross-layer escalation
 
 A governed-intelligence threat model cannot assume that an adversary attacks one component at a time. The higher-consequence failure mode is often a **multi-vector attack** in which several individually bounded signals are chained across architectural boundaries.

@@ -6,6 +6,8 @@ Repository: `cranium-kernel`
 Branch: `main`
 Verified SHA: `e36bdba2fe0a448473f94250920e751c95e1d3e0`
 Environment: clean clone tracking `origin/main`
+Runtime: Node v24.18.0, npm 11.19.1
+package-lock.json SHA-256: `cf38054cc1326a816c80fdb92b63209242b9cde2dd9cae94002b9aa40373f199`
 
 ## Commands
 

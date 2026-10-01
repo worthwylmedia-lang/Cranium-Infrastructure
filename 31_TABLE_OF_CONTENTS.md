@@ -38,6 +38,7 @@
 35. Binder Finalization Checklist
 36. Governance Substrate Whitepaper
 37. OS Architecture Poster
+38. Human Utility Roadmap
 
 Supporting records:
 - `evidence/`

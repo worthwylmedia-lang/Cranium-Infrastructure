@@ -5,7 +5,7 @@ Convert the Chromium Edition from documented integration into a bootable, eviden
 
 ## Evidence state
 - Architecture/integration: PASS within documented scope
-- Kernel diligence pin: e36bdba2fe0a448473f94250920e751c95e1d3e0
+- Kernel diligence pin: 0d0ae41f78e3f23da073390285d401c4a215dc6a
 - x86-64 build: PENDING
 - Boot: PENDING
 - Runtime validation: PENDING

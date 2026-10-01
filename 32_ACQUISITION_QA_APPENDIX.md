@@ -10,7 +10,7 @@ This appendix answers questions an external reviewer, OS architect, or governanc
 
 The canonical authority implementation is the Convertible Cranium Kernel, pinned at:
 
-e36bdba2fe0a448473f94250920e751c95e1d3e0
+0d0ae41f78e3f23da073390285d401c4a215dc6a
 
 This is the September 30, 2026 verified checkpoint.
 

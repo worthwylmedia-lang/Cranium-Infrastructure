@@ -131,12 +131,12 @@ This is the migration path for governed infrastructure.
 
 The audit identified a documentation discrepancy that must be resolved:
 
-- Verified Kernel pin: e36bdba2fe0a448473f94250920e751c95e1d3e0
+- Verified Kernel pin: 0d0ae41f78e3f23da073390285d401c4a215dc6a
 - Older IP-boundary references: c2bd6d3 and 482b9c54a80f0894e523cb94c77fa85d3f62c264
 
 The binder must:
 
-- update current authoritative references to e36bdba2fe0a448473f94250920e751c95e1d3e0
+- update current authoritative references to 0d0ae41f78e3f23da073390285d401c4a215dc6a
 - preserve older pins as historical lineage
 - ensure no document implies multiple current Kernel revisions
 

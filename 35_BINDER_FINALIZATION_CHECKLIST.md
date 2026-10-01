@@ -7,7 +7,7 @@ This checklist is the final structural gate before external diligence review. It
 ## 1. Authority Gates
 
 - Authority Invariant propagated across the corpus
-- Kernel canonical pin reconciled: e36bdba2fe0a448473f94250920e751c95e1d3e0
+- Kernel canonical pin reconciled: 0d0ae41f78e3f23da073390285d401c4a215dc6a
 - No subsystem is designated as capable of synthesizing authority
 - Non-emergence is addressed across cognition, evidence, memory, UI, runtime, and consensus
 - Receipt-chain integrity is documented

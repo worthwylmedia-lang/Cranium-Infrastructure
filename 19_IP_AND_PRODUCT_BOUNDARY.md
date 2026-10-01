@@ -78,7 +78,7 @@ File: `KERNEL_PIN` (repo root)
 
 | Field | Value |
 |-------|--------|
-| Current verified Kernel diligence pin | `e36bdba2fe0a448473f94250920e751c95e1d3e0` (verified 2026-09-30) |
+| Current verified Kernel diligence pin | `0d0ae41f78e3f23da073390285d401c4a215dc6a` (verified 2026-09-30) |
 | Historical Phase 1–3 reproducibility gate | `c2bd6d3` / `c2bd6d38a71f1ae124beec73df68b8af91a23bc0` |
 | Historical Kernel `main` tip (Canon V1 squash lineage) | `482b9c54a80f0894e523cb94c77fa85d3f62c264` |
 

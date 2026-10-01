@@ -31,7 +31,7 @@ Convertible Cranium is not itself an agent framework, prompt wrapper, safety fil
 
 ## Evidence and Limits
 
-The Kernel has a recorded 2026-09-30 clean-clone verification checkpoint at `e36bdba2fe0a448473f94250920e751c95e1d3e0` with the documented verification commands completing with exit code 0.
+The Kernel has a recorded 2026-09-30 clean-clone verification checkpoint at `0d0ae41f78e3f23da073390285d401c4a215dc6a` with the documented verification commands completing with exit code 0.
 
 The Chromium Edition integration is staged but still requires x86-64 ChromiumOS image build, boot, and runtime acceptance evidence before those states can be represented as verified.
 

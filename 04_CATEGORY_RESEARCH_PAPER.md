@@ -98,7 +98,7 @@ A consequential operation is represented as an explicit sequence of intent, prop
 
 The 2026-09-30 Kernel diligence checkpoint records:
 
-- verified main revision `e36bdba2fe0a448473f94250920e751c95e1d3e0`
+- verified main revision `0d0ae41f78e3f23da073390285d401c4a215dc6a`
 - clean clone tracking `origin/main`
 - `npm ci && npm run verify && npm run verify:denial-semantics`
 - observed exit code `0`

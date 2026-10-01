@@ -10,9 +10,9 @@ Convertible Cranium is documented here as an authority-bound, dual-engine govern
 
 | Claim | Evidence path | Status |
 |---|---|---|
-| Canonical Kernel is pinned to main commit e36bdba2fe0a448473f94250920e751c95e1d3e0 | KERNEL_PIN, evidence/verification-records/KERNEL_VERIFICATION_2026-09-30.md | Verified checkpoint |
+| Canonical Kernel evidence is standardized on clean commit `0d0ae41f78e3f23da073390285d401c4a215dc6a` | KERNEL_PIN, evidence/verification-records/KERNEL_VERIFICATION_2026-09-30.md | Verified checkpoint |
 | Kernel clean-clone verification completed with documented commands | KERNEL_PIN, 17_VERIFICATION.md | Self-attested executable checkpoint |
-| Wave V security suite blocks 25 tested attack conditions | evidence/WAVE_V_BURN_RESULTS_2026-09-30.md | Verified on tested checkout; 4 environment gates pending |
+| Wave V security suite records 17 hostile attacks, 9 controls/checks, and 3 pending evidence gates | evidence/WAVE_V_BURN_RESULTS_2026-09-30.md | Verified on the standardized clean checkout; 3 environment gates pending |
 | Canonical custody hardening resists a valid CORE signature without custody proof | Kernel Wave V evidence | Verified on tested checkout; custody is process-local, not HSM |
 | Signed Constitution loader rejects tampering, foreign signer, and version mismatch | Kernel signed-Constitution check | Verified on tested checkout |
 | Chromium Edition integration payload/build scripts exist | 20_CHROMIUM_EDITION.md, root ChromiumOS plans | Verified as staged integration work |
@@ -30,17 +30,23 @@ A narrative statement without an executable artifact or explicit self-attestatio
 
 ## Reproducibility checkpoint
 
-The current Kernel checkpoint is e36bdba2fe0a448473f94250920e751c95e1d3e0 on origin/main. The recorded clean-clone command sequence is:
+The standardized Kernel evidence revision is `0d0ae41f78e3f23da073390285d401c4a215dc6a`, a clean commit created after the Wave V classification/proof-reporting corrections. The prior `e36bdba...` checkpoint is historical and is not the revision used for the current Wave V ledger. The recorded command sequence is:
 
     npm ci
     npm run verify
     npm run verify:denial-semantics
 
-Recorded environment: Node v24.18.0, clean clone, Android/arm64 Termux, verification date 2026-09-30, exit code 0.
+Recorded local environment: Node v24.18.0, clean working tree at the standardized revision, Android/arm64 Termux, verification date 2026-09-30, exit code 0. The target Chromium Edition platform remains native x86-64; Android/arm64 is a development/verification environment, not the target OS runtime.
 
 This is a self-attested executable checkpoint, not an independent third-party audit. A stranger must have access to the exact Kernel revision and its dependency lockfile to reproduce it. The current acquisition binder is public, while the historical Kernel path may be inaccessible to a reviewer using a different authenticated account. That access/provenance boundary is therefore a diligence item, not a hidden assumption.
 
 The full output is retained in the verification record rather than summarized as a bare “pass.” The reviewer should independently rerun the commands and compare the observed output, runtime, lockfile, and repository revision.
+
+## Attack and test ledger
+
+The canonical Wave V ledger is `evidence/TEST_AND_ATTACK_LEDGER_2026-09-30.md`. It separates **17 hostile attack conditions** from **9 controls/checks** and **3 pending runtime gates**. The 17/9 split is classification, not a claim that every control is an attack. V3-A and V4-A retain their deterministic workload counts inside one ledger row each.
+
+The acquisition stress suite remains a manifest until each case has a real executable binding and captured evidence.
 
 ## Binder Map
 

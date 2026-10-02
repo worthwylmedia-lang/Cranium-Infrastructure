@@ -39,6 +39,7 @@
 36. Governance Substrate Whitepaper
 37. OS Architecture Poster
 38. Human Utility Roadmap
+39. WorthWyl Studio Hybrid Surface
 
 ## Current architecture note
 

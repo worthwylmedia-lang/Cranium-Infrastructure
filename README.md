@@ -2,7 +2,7 @@
 
 ## Governed-Intelligence Substrate
 
-Convertible Cranium is documented here as an authority-bound, dual-engine governance substrate. This binder is an acquisition-facing evidence index, not a second authority implementation.
+Convertible Cranium is documented here as an authority-bound, dual-substrate / quad-engine governance substrate. This binder is an acquisition-facing evidence index, not a second authority implementation.
 
 > Cognition proposes. Authority decides. Execution obeys. Continuity is governed. Recovery is deterministic.
 
@@ -55,7 +55,7 @@ The acquisition stress suite remains a manifest until each case has a real execu
 02 Category Definition and Boundary
 03 Canonical Authority Invariant
 04 Category Research Note
-05 Eight-Plane Architecture
+05 Dual-Substrate / Quad-Engine Architecture
 06 Authority Model
 07 Structural Validation Matrix
 08 Migration Chapter
@@ -127,3 +127,11 @@ This binder intentionally distinguishes:
 - **Not claimed:** explicitly outside the evidence established here.
 
 No claim of invulnerability, certification, independent security audit, market validation, or completed ChromiumOS production release is made by this binder.
+
+## Current architecture baseline
+
+This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
+
+Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
+
+The former Eight-Plane and Dual-Engine descriptions are historical framing only and must not be read as the current governance model.

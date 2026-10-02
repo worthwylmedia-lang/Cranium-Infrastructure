@@ -1,6 +1,6 @@
 # Cranium Migration Chapter
 
-**Binder-Grade • Authority-Bound • Dual-Engine • Governance Substrate**
+**Binder-Grade • Authority-Bound • Dual-Substrate / Quad-Engine • Governance Substrate**
 
 This chapter defines the complete, disciplined migration path from the legacy Cranium ecosystem to the curated acquisition-facing infrastructure surface. It integrates the structural validation matrix, the authority invariant, the category definition, the research paper, and the audit findings into a single operational plan.
 
@@ -24,10 +24,10 @@ This is the migration path for governed infrastructure.
 |---|---|
 | Front Matter | Executive Summary → Introduction → Invariant → Category → Research |
 | Authority Invariant | Present, testable, propagated |
-| Architecture | Eight planes fully documented |
+| Architecture | Four engines across two governance substrates fully documented |
 | Authority Model | Kernel-issued authority defined |
 | Authority Flow | Full governed transition path |
-| Threat Model | Nine threat domains mapped across the eight architectural planes and external boundaries |
+| Threat Model | Nine threat domains mapped across the four engines, operational surfaces, safety controls, and external boundaries |
 | Multi-Vector Analysis | Chained attacks documented |
 | Developer Mental Model | Engineering laws present |
 | Verification | Kernel verification + denial semantics |
@@ -75,7 +75,7 @@ Validated dimensions include:
 
 - architecture coherence
 - authority separation
-- dual-engine model
+- dual-substrate / quad-engine model
 - Kernel canonicality
 - executable Kernel verification
 - denial semantics
@@ -187,3 +187,11 @@ Migration acceptance requires a clean acquisition surface, preserved provenance,
 PENDING evidence may remain only when the limitation is explicit and the material does not represent the pending state as verified.
 
 The Kernel remains the sole canonical authority source throughout migration.
+
+## Current architecture baseline
+
+This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
+
+Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
+
+The former Eight-Plane and Dual-Engine descriptions are historical framing only and must not be read as the current governance model.

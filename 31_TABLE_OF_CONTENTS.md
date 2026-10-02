@@ -5,7 +5,7 @@
 02. Category Definition
 03. Canonical Authority Invariant
 04. Category Research Paper
-05. Eight-Plane Architecture
+05. Dual-Substrate / Quad-Engine Architecture
 06. Authority Model
 07. Structural Validation Matrix
 08. Migration Chapter
@@ -40,7 +40,11 @@
 37. OS Architecture Poster
 38. Human Utility Roadmap
 
+## Current architecture note
+
+The current canonical model is Dual-Substrate / Quad-Engine. The former Eight-Plane and Dual-Engine descriptions are historical framing only.
+
 Supporting records:
-- `evidence/`
-- `provenance/`
-- `demos/`
+- evidence/
+- provenance/
+- demos/

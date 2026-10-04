@@ -63,7 +63,9 @@ Studio claims must remain evidence-scoped. A local demonstration can prove the b
 
 ## Research alignment
 
-Current public AI-governance guidance emphasizes continuous governance, measurement, management, security, resilience, and lifecycle accountability. NIST's AI RMF organizes these activities through Govern, Map, Measure, and Manage, while OWASP's 2026 agentic-security work emphasizes explicit governance of authorization risk. Studio's role separation is consistent with that direction, but this document does not claim standards certification.
+Current public AI-governance guidance remains consistent with the Studio separation model, but it does not certify the product. NIST's AI RMF 1.0 uses Govern, Map, Measure, and Manage as its four core functions and is being revised; NIST also released a 2026 concept note for a Trustworthy AI in Critical Infrastructure profile. OWASP's 2026 Agentic Applications guidance and its 2026 agent-security resources emphasize authorization boundaries, least privilege, human approval for high-impact actions, and controls around agent-to-system and agent-to-agent execution. These references support the threat-model direction only; they are not certification evidence.
+
+Reference sources: NIST AI RMF (https://www.nist.gov/itl/ai-risk-management-framework); OWASP Top 10 for Agentic Applications 2026 (https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/).
 
 ## Acquisition position
 

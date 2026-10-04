@@ -46,3 +46,7 @@ Any document describing the current architecture must agree with this baseline. 
 ## Evidence rule
 
 Architecture documentation describes boundaries. It does not substitute for executable evidence, independent review, runtime validation, or legal diligence.
+
+## Implementation status boundary
+
+This file defines the canonical documentation architecture. It does not assert that every named component is implemented in the production codebase. See `40_IMPLEMENTATION_STATUS_AND_GAP_REGISTER.md` for the component-by-component evidence status and remediation gates.

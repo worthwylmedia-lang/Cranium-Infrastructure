@@ -89,6 +89,8 @@ The acquisition stress suite remains a manifest until each case has a real execu
 36 Governance Substrate Whitepaper
 37 OS Architecture Poster
 38 Human Utility Roadmap
+39 WorthWyl Studio Hybrid Surface
+40 Implementation Status and Gap Register
 
 ### Supporting evidence and plans
 
@@ -135,3 +137,48 @@ This document is part of the current Convertible Cranium documentation set. The 
 Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
 
 The former Eight-Plane and Dual-Engine descriptions are historical framing only and must not be read as the current governance model.
+
+## Implementation Status Boundary
+
+The current Dual-Substrate / Quad-Engine model is the canonical architecture baseline, not a claim that every named stage is already shipped. The implementation state is tracked explicitly in `40_IMPLEMENTATION_STATUS_AND_GAP_REGISTER.md`.
+
+A component may only be described as **Implemented and Verified** when executable evidence supports that status. Designed components, pending integrations, environment blockers, and unverified mechanisms remain labeled rather than silently promoted by documentation.
+
+This distinction is particularly important for Governance Review Juror One, Governance Review Juror Two, Cranium Listener, Commander-to-Kernel transport, and the Miracle Memory domain model.
+
+## Public Front Door / Production System of Record
+
+This repository is the primary public architecture and acquisition binder for Convertible Cranium. It is intentionally a **curated public front door, not a second production implementation**.
+
+The authoritative production system remains under [`worthwyl2022-cloud`](https://github.com/worthwyl2022-cloud). This account explains and directs; the production account implements and proves.
+
+### Production mapping
+
+| Public architecture concept | Authoritative production surface |
+|---|---|
+| Canonical authority | [`cranium-kernel`](https://github.com/worthwyl2022-cloud/cranium-kernel) |
+| Evidence / attestation | [`cranium-synapse`](https://github.com/worthwyl2022-cloud/cranium-synapse) |
+| Cognitive proposal | [`cranium-ai`](https://github.com/worthwyl2022-cloud/cranium-ai) |
+| Commander / operator surface | [`cranium-ultra-platform`](https://github.com/worthwyl2022-cloud/cranium-ultra-platform) |
+| Verification / diligence | [`cranium-diligence-workbench`](https://github.com/worthwyl2022-cloud/cranium-diligence-workbench) |
+| Appliance delivery | [`cranium-boot-drive`](https://github.com/worthwyl2022-cloud/cranium-boot-drive) |
+| Acquisition demonstration | [`cranium-acquisition-demo-drive`](https://github.com/worthwyl2022-cloud/cranium-acquisition-demo-drive) |
+| Historical lineage | [`cranium-archive`](https://github.com/worthwyl2022-cloud/cranium-archive) |
+
+## Cranium Commander Boundary
+
+**Cranium Commander is the operational control surface, not the canonical authority source.**
+
+Commander may present system state, construct proposals, orchestrate governed workflows, submit authority requests, and participate in runtime safety and continuity. It does not create canonical authority, replace the Kernel, redefine constitutional truth, or become an independent system of record.
+
+The production Commander/operator implementation is mapped through `worthwyl2022-cloud/cranium-ultra-platform`.
+
+The governing distinction is:
+
+> **Cognition may come from anywhere. Authority comes only through Cranium.**
+
+## Public Evidence Status
+
+This binder distinguishes **Verified**, **Self-attested**, **Pending**, **Designed, not implemented**, **Partially implemented**, and **Not claimed** material. Public architecture descriptions are not treated as independent verification merely because they are documented here.
+
+Private credentials, keys, sensitive media, private contracts, and unsupported production/security claims remain outside this public surface.

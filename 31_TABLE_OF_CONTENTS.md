@@ -40,6 +40,7 @@
 37. OS Architecture Poster
 38. Human Utility Roadmap
 39. WorthWyl Studio Hybrid Surface
+40. Implementation Status and Gap Register
 
 ## Current architecture note
 

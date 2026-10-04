@@ -1,54 +1,48 @@
 # OS Architecture Poster
 
-One-Page Architectural Summary • Text-Only Binder Version
+One-Page Architectural Summary • Current Binder Version
 
 ## Convertible Cranium — OS Architecture Poster
 
 ### Category
 
-Infrastructure Ecosystem Authority-Bound Dual-Engine Governance Substrate
+Infrastructure Ecosystem Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate
 
 ### Invariant
 
 No combination of non-authoritative signals may synthesize canonical authority.
 Authority exists only when the Kernel issues a governed transition.
 
-### Dual-Engine Model
+### Four Engines / Two Substrates
 
-- Cognition Engine: Cranium AI, Synapse, Commander OS
-- Authority Engine: Kernel, Constitution, Miracle Memory, COMA, Receipts
+- Cranium AI: intelligence and orchestration.
+- Synapse: evidence and assessment.
+- Governance Review Juror One: constructive coherence and evidence review.
+- Governance Review Juror Two: adversarial contradiction and boundary review.
 
-### Eight-Plane Architecture
+The jurors are independently constituted with different review mandates and processes. Neither is authoritative.
 
-1. Commander OS
-2. Cranium AI
-3. Synapse
-4. Kernel
-5. Miracle Memory
-6. Circuit Breaker / COMA
-7. Constitution
-8. Receipts & Attestation
+### Authority and Runtime
+
+- Kernel: sole canonical authority.
+- Commander OS: operational control surface.
+- Cranium Listener: untrusted ingress.
+- Miracle Memory: governed continuity.
+- Circuit Breaker / COMA: cross-cutting containment and recovery.
+- Receipts / Attestation: evidence and provenance, not authority.
 
 ### Governed Transition
 
-intent → proposal → evidence → governed request → Kernel decision → execution → receipt → continuity
+intent → AI proposal → Synapse assessment → Juror One / Juror Two review → governed request → Kernel decision → execution → receipt → continuity
 
-### Threat Model
+### Historical framing
 
-Nine threat domains plus multi-vector attack analysis.
+Eight-Plane and Dual-Engine are retained only as historical taxonomy.
 
 ### Verification
 
 September 30, 2026 Kernel verification — PASS within documented scope.
 ChromiumOS runtime evidence — PENDING.
-
-### Repository
-
-Clean, curated, provenance-preserving, migration-ready.
-
-### Migration Path
-
-clean surface → secret sweep → structural gate → curated construction → Kernel reconciliation → Chromium evidence gate → authenticated migration → provenance preservation
 
 ### Evidence Rule
 

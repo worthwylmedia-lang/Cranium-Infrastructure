@@ -1,4 +1,4 @@
-# Convertible Cranium: A Unified Authority-Bound Dual-Engine Governance Substrate
+# Convertible Cranium: A Unified Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate
 
 ## Category Research Paper — September 2026
 
@@ -20,7 +20,7 @@ For technical precision, the canonical authority source is the Convertible Crani
 
 ### 2. Category Definition
 
-Convertible Cranium proposes the category **Infrastructure Ecosystem Authority-Bound Dual-Engine Governance Substrate**.
+Convertible Cranium proposes the category **Infrastructure Ecosystem Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate**.
 
 **Infrastructure ecosystem:** a multi-repository governed architecture spanning Commander OS, Cranium AI, Synapse, Kernel, Miracle Memory, Circuit Breaker / COMA, Chromium Edition integration, provenance, verification, and demonstrations.
 
@@ -128,6 +128,14 @@ The research record does not establish that no similar individual mechanism exis
 
 ### 14. Conclusion
 
-Convertible Cranium proposes a new infrastructure category centered on an authority-bound dual-engine governance substrate. Its architecture separates cognition from authority, binds continuity to governance, constrains consequential execution, supports deterministic recovery, and produces verifiable evidence for governed transitions.
+Convertible Cranium proposes a new infrastructure category centered on an authority-bound dual-substrate / quad-engine governance substrate. Its architecture separates cognition from authority, binds continuity to governance, constrains consequential execution, supports deterministic recovery, and produces verifiable evidence for governed transitions.
 
 The category should be evaluated through its explicit architecture, executable verification evidence, documented provenance, comparative research, threat model, and stated limitations rather than through marketing assertions alone.
+
+## Current architecture baseline
+
+This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
+
+Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
+
+The former Eight-Plane and Dual-Engine descriptions are historical framing only and must not be read as the current governance model.

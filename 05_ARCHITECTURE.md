@@ -1,51 +1,52 @@
 # Convertible Cranium Architecture
 
-## Eight-Plane Governed-Intelligence Architecture
+## Dual-Substrate / Quad-Engine Architecture
 
-Convertible Cranium is a governed-intelligence substrate designed to separate cognition from authority while binding continuity, execution, recovery, and evidence to explicit governance boundaries.
+Convertible Cranium is a governed-intelligence infrastructure architecture designed to separate cognition, assessment, independent governance review, and canonical authority while binding continuity, execution, recovery, and evidence to explicit governance boundaries.
 
-The system is organized as eight cooperating planes. A plane may propose, assess, constrain, execute, remember, contain, or attest within its defined boundary. No plane other than the Kernel is a canonical authority source.
+### Current architecture baseline
 
-### 1. Commander OS
+The current canonical architecture is Dual-Substrate / Quad-Engine. The earlier Dual-Engine and Eight-Plane descriptions are historical framing and must not be used as the current governance model.
 
-The operator-facing control surface. Commander presents identity, system state, governed actions, receipts, and recovery state. It may request and execute authorized operations, but it never creates authority.
+#### Four engines across two governance substrates
 
-### 2. Cranium AI
+1. Cranium AI: intelligence and orchestration. It interprets intent, generates proposals, coordinates bounded work, and remains non-authoritative.
+2. Synapse: evidence and assessment. It evaluates evidence, trust conditions, and risk-relevant signals within explicit contracts and remains non-authoritative.
+3. Governance Review Juror One: independent constructive review focused on coherence, justification, evidence sufficiency, and whether a proposed transition is supportable.
+4. Governance Review Juror Two: independent adversarial review focused on contradiction, failure modes, boundary violations, unacceptable conditions, and whether a proposed transition must be rejected.
 
-The cognition and orchestration plane. AI interprets intent, generates proposals, coordinates bounded work, and can surface uncertainty. AI output is proposal material, not authority.
+The two jurors are intentionally constituted with different review mandates and processes. They are reviewers, not authority issuers.
 
-### 3. Synapse
+#### Authority boundary
 
-The bounded evidence and assessment plane. Synapse evaluates evidence, trust conditions, attestations, and risk-relevant signals within explicit contracts. Synapse cannot authorize an operation.
+The Convertible Cranium Kernel is the sole canonical authority source. No engine, juror, UI, memory record, runtime state, receipt, external attestation, or consensus can create or substitute for Kernel authority.
 
-### 4. Kernel
+#### Operational and safety surfaces
 
-The canonical authority plane. The Kernel enforces constitutional constraints, capabilities, lifecycle rules, receipt integrity, replay resistance, and denial semantics. Authority is issued only through this boundary.
+- Commander OS is the operational control surface.
+- Cranium Listener is untrusted ingress and must not be treated as an authority source.
+- Miracle Memory provides governed continuity, contradiction handling, quarantine, identity, journal, and recovery context.
+- Circuit Breaker / COMA provides cross-cutting runtime containment, checkpoint rollback, fencing, and bounded recovery.
+- Receipts / attestation provide evidence of governed transitions and provenance; they do not issue authority.
 
-### 5. Miracle Memory
+#### Governed path
 
-The governed continuity plane. Memory records authorized state, contradictions, journal history, quarantine state, and recovery context. Stored continuity cannot silently become authority.
+Listener → AI proposal → Synapse assessment → independent Juror One / Juror Two review → governed request → Kernel decision → execution → receipt → Miracle Memory
 
-### 6. Circuit Breaker / COMA
+Circuit Breaker / COMA may interrupt or roll back the runtime path according to its explicit safety contract. It does not become a second authority source.
 
-The containment and recovery plane. Runtime safety controls can trip an execution fence, preserve a checkpoint, reject unsafe continuation, roll back governed state, and enter a bounded half-open recovery path.
+#### Historical terminology
 
-### 7. Constitution
+The former Eight-Plane model remains useful as a historical subsystem taxonomy. The former Dual-Engine model remains useful as an earlier conceptual distinction between cognition and authority. Neither is the current canonical architecture.
 
-The durable constraint plane. Prime Directives, invariants, and constitutional rules establish constraints that remain stable across sessions and components. They are enforced through the canonical authority boundary rather than becoming a competing authority implementation.
+## Architecture thesis
 
-### 8. Receipts & Attestation
+Cognition may propose. Evidence may inform. Independent review may challenge or support a proposed transition. Only the Kernel can issue canonical authority.
 
-The verifiable-history plane. Signed receipts, attestation chains, lifecycle records, hashes, and replay checks make consequential transitions inspectable and resistant to silent mutation or replay.
+The architecture is deliberately resistant to authority emergence through composition. A persuasive model output, favorable evidence, two agreeing jurors, a UI state, a memory record, an external attestation, or a runtime signal cannot become authority merely by being combined.
 
-## System Thesis
+## Acquisition boundary
 
-> Cognition proposes. Authority decides. Execution obeys. Continuity is governed. Recovery is deterministic.
+The canonical Kernel implementation remains separately maintained. The acquisition-facing repository documents the architecture and evidence boundary without implying transfer of all underlying platform IP, future improvements, private assets, or third-party rights.
 
-The planes are deliberately separated so that a persuasive model response, a UI state, a memory record, an evidence bundle, or a runtime signal cannot synthesize authority by composition.
-
-## Acquisition Boundary
-
-The canonical Kernel implementation remains separately maintained. The acquisition-facing repository documents and demonstrates the architecture without implying transfer of all underlying platform IP, future improvements, private assets, or third-party rights.
-
-See the subsystem specifications, authority flow, threat model, verification record, and IP/product boundary for the detailed evidence and limits.
+See the authority flow, threat model, verification record, and IP/product boundary for detailed evidence and limitations.

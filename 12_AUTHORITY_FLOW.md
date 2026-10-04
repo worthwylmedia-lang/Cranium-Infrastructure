@@ -8,14 +8,16 @@ This document defines the governed transition from an AI-generated proposal to a
 The central rule is simple: cognition may propose; authority must be separately established.
 
 ## Canonical flow
-1. **Human or system intent** enters the Commander surface.
-2. **Convertible Cranium AI** interprets intent and proposes a candidate action or plan.
-3. **Synapse** evaluates evidence, scope, risk, provenance, and trust conditions.
-4. **Kernel** evaluates the request against constitutional authority, capabilities, receipts, replay state, lifecycle state, and applicable constraints.
-5. **Kernel decision** is authoritative. A denial is terminal unless a defined recovery or review path changes the state.
-6. **Commander** executes only an authorized transition. It does not grant authority.
-7. **Miracle Memory** records authorized continuity, contradiction, journal state, and recovery-relevant evidence.
-8. **Circuit Breaker / COMA** can interrupt, quarantine, roll back, or prevent continuation when critical conditions are detected.
+1. **Listener** receives intent as untrusted ingress and cannot authorize.
+2. **Commander OS** establishes the operational context for the requested action.
+3. **Cranium AI** interprets intent and proposes a candidate action or plan.
+4. **Synapse** evaluates evidence, scope, risk, provenance, and trust conditions.
+5. **Governance Review Juror One** performs constructive coherence and evidence-sufficiency review.
+6. **Governance Review Juror Two** performs independent adversarial contradiction, boundary, and rejection-condition review.
+7. **Kernel** evaluates the governed request against constitutional authority, capabilities, receipts, replay state, lifecycle state, applicable constraints, and the review results. The Kernel alone issues canonical authority.
+8. **Commander OS / governed runtime** executes only an authorized transition. It does not grant authority.
+9. **Miracle Memory** records authorized continuity, contradiction, journal state, identity, and recovery-relevant evidence.
+10. **Circuit Breaker / COMA** can interrupt, quarantine, roll back, or prevent continuation when critical conditions are detected.
 
 ## Authority boundary
 The model is not the authority source.
@@ -49,3 +51,11 @@ Those are important adjacent implementations. They establish that pieces of the 
 
 ## Evidence rule
 Any claim about implementation must be tied to repository evidence, executable verification, or a clearly identified external source. Architectural language must not be inflated into a claim of certification, patentability, or universal novelty.
+
+## Current architecture baseline
+
+This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
+
+Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
+
+The former Eight-Plane and Dual-Engine descriptions are historical framing only and must not be read as the current governance model.

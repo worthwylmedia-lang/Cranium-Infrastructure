@@ -10,4 +10,4 @@ This is diligence evidence, not a claim of production certification.
 
 ## Current architecture position
 
-This subsystem participates in the current Dual-Substrate / Quad-Engine architecture. It does not create canonical authority independently. The Convertible Cranium Kernel remains the sole canonical authority source; Governance Review Juror One and Governance Review Juror Two are distinct review paths, not authority issuers.
+Current canonical path: Listener → Engine 1 Synapse → independent Engine 2A Constitutional Authority (Substrate A, “May We?”) and Engine 2B Evidence Grounding (Substrate B, “Is It So?”) → Engine 3 Convertible Cranium Kernel convergence → governed execution and receipt/lineage. Cranium AI is a cognition/application surface, not an authority-path engine. Neither substrate grants canonical authority; the Kernel is the sole canonical authority source.

@@ -1,52 +1,77 @@
 # Convertible Cranium Architecture
 
-## Dual-Substrate / Quad-Engine Architecture
+## Dual-Substrate / Quad-Engine Governance Architecture
 
-Convertible Cranium is a governed-intelligence infrastructure architecture designed to separate cognition, assessment, independent governance review, and canonical authority while binding continuity, execution, recovery, and evidence to explicit governance boundaries.
+Convertible Cranium is an authority-bound governance architecture designed to separate cognition, evidence, constitutional admissibility, and canonical authority. Its operating principle is:
 
-### Current architecture baseline
+> **Cognition may come from anywhere. Authority comes only through Convertible Cranium.**
 
-The current canonical architecture is Dual-Substrate / Quad-Engine. The earlier Dual-Engine and Eight-Plane descriptions are historical framing and must not be used as the current governance model.
+The canonical architecture has four engines. The two middle engines are independent governance substrates with different constitutions, responsibilities, and evaluation paths.
 
-#### Four engines across two governance substrates
+## Canonical path
 
-1. Cranium AI: intelligence and orchestration. It interprets intent, generates proposals, coordinates bounded work, and remains non-authoritative.
-2. Synapse: evidence and assessment. It evaluates evidence, trust conditions, and risk-relevant signals within explicit contracts and remains non-authoritative.
-3. Governance Review Juror One: independent constructive review focused on coherence, justification, evidence sufficiency, and whether a proposed transition is supportable.
-4. Governance Review Juror Two: independent adversarial review focused on contradiction, failure modes, boundary violations, unacceptable conditions, and whether a proposed transition must be rejected.
+```text
+UNTRUSTED INGRESS
+        |
+     LISTENER
+        |
+ ENGINE 1 · SYNAPSE
+ proposal / context / evidence binding / trace
+        |
+        +--------------------------------+
+        |                                |
+ ENGINE 2A · SUBSTRATE A          ENGINE 2B · SUBSTRATE B
+ Constitutional Authority        Evidence Grounding
+ "MAY WE?"                       "IS IT SO?"
+        |                                |
+        +----------------+---------------+
+                         |
+              ENGINE 3 · CRANIUM KERNEL
+          canonical convergence and authority
+                         |
+                GOVERNED EXECUTION
+                         |
+              RECEIPT / PROOF / LINEAGE
+```
 
-The two jurors are intentionally constituted with different review mandates and processes. They are reviewers, not authority issuers.
+## Engine responsibilities
 
-#### Authority boundary
+### Engine 1: Convertible Cranium Synapse
 
-The Convertible Cranium Kernel is the sole canonical authority source. No engine, juror, UI, memory record, runtime state, receipt, external attestation, or consensus can create or substitute for Kernel authority.
+Synapse handles bounded proposal/context processing, evidence binding, assessment, attestation, and trace commitment. It prepares information for governance review but cannot grant canonical authority.
 
-#### Operational and safety surfaces
+### Engine 2A: Constitutional Authority
 
-- Commander OS is the operational control surface.
-- Cranium Listener is untrusted ingress and must not be treated as an authority source.
-- Miracle Memory provides governed continuity, contradiction handling, quarantine, identity, journal, and recovery context.
-- Circuit Breaker / COMA provides cross-cutting runtime containment, checkpoint rollback, fencing, and bounded recovery.
-- Receipts / attestation provide evidence of governed transitions and provenance; they do not issue authority.
+Substrate A evaluates constitutional admissibility, policy constraints, scope, prohibited actions, approval requirements, and applicable version bindings. Its governing question is **“May we?”** The A1/A2 path supplies an independently constituted finding. That finding is an input to the Kernel, not an authority grant.
 
-#### Governed path
+### Engine 2B: Evidence Grounding
 
-Listener → AI proposal → Synapse assessment → independent Juror One / Juror Two review → governed request → Kernel decision → execution → receipt → Miracle Memory
+Substrate B evaluates evidence provenance, integrity, contradiction, freshness/relevance, and sufficiency. Its governing question is **“Is it so?”** The B1/B2 path supplies an independently constituted finding. That finding is an input to the Kernel, not an authority grant.
 
-Circuit Breaker / COMA may interrupt or roll back the runtime path according to its explicit safety contract. It does not become a second authority source.
+Substrates A and B must not be collapsed into duplicate evaluators that deterministically reproduce the same judgment. They have distinct policies, formulas, and responsibilities while sharing the principle **Truth above all**.
 
-#### Historical terminology
+### Engine 3: Convertible Cranium Kernel
 
-The former Eight-Plane model remains useful as a historical subsystem taxonomy. The former Dual-Engine model remains useful as an earlier conceptual distinction between cognition and authority. Neither is the current canonical architecture.
+The Kernel is the sole canonical authority source. It validates the required proposal, authorization context, A/B findings, evidence and version bindings, replay/idempotency boundary, current state, and convergence conditions. It then either performs the governed authority transition with durable commit and receipt/lineage or fails closed according to the applicable contract.
 
-## Architecture thesis
+**Convergence is not voting.** Neither substrate is authoritative, and no model output, UI state, memory record, external attestation, receipt, or runtime signal can substitute for the Kernel.
 
-Cognition may propose. Evidence may inform. Independent review may challenge or support a proposed transition. Only the Kernel can issue canonical authority.
+## Other system surfaces
 
-The architecture is deliberately resistant to authority emergence through composition. A persuasive model output, favorable evidence, two agreeing jurors, a UI state, a memory record, an external attestation, or a runtime signal cannot become authority merely by being combined.
+- **Cranium AI:** cognition/application surface for intelligence and orchestration; not an additional authority-path engine.
+- **Cranium Listener:** untrusted ingress.
+- **Convertible Cranium Commander OS:** operational control surface and human-facing workspace; it does not grant authority.
+- **Miracle Memory:** governed continuity, identity, provenance, contradiction handling, quarantine, snapshots, and recovery context.
+- **Metabolic Memory v2:** resource governance over memory atoms; it does not grant authority and protects locked/identity atoms from flux eviction under its documented rules.
+- **Circuit Breaker / COMA:** cross-cutting containment, freeze/quarantine, evidence preservation, recovery, and controlled resume.
+- **Receipts / attestation:** evidence and provenance of governed transitions; they do not issue authority.
 
-## Acquisition boundary
+## Historical terminology
 
-The canonical Kernel implementation remains separately maintained. The acquisition-facing repository documents the architecture and evidence boundary without implying transfer of all underlying platform IP, future improvements, private assets, or third-party rights.
+The former Eight-Plane, Dual-Engine, and earlier juror-centered descriptions may be retained only as clearly labeled historical framing. They must not be presented as the current canonical governance path.
 
-See the authority flow, threat model, verification record, and IP/product boundary for detailed evidence and limitations.
+## Acquisition and evidence boundary
+
+This binder is an architecture and evidence index, not a second implementation of the Kernel. Every material claim should trace to the exact repository/revision, component contract, test or artifact, and evidence status.
+
+A documented architecture is not itself proof of implementation. Project-run verification is not independent third-party audit. Staged Chromium Edition integration is not a completed production ChromiumOS release. Chain of title, patentability, legal novelty, market demand, and third-party rights require separate diligence.

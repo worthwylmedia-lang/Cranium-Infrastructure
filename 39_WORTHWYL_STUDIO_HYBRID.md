@@ -1,74 +1,39 @@
 # WorthWyl Studio Hybrid Surface
 
-**Effective:** 2026-10-02
+**Effective:** 2026-10-14
+**Purpose:** Define the human-facing creation and operations surface without creating a second authority boundary.
 
-WorthWyl Studio is the current human-facing creation, operations, and diligence surface for the Convertible Cranium ecosystem.
+## Product and implementation roles
 
-## Hybrid decision
+- **WorthWyl Studio:** human-facing creation, operations, diligence, and project workspace.
+- **Forge engine:** retained workflow and creation implementation underneath Studio.
+- **Convertible Cranium Commander OS:** operational control surface for governed workflows.
+- **Convertible Cranium:** governance substrate and authority architecture.
+- **Convertible Cranium Kernel:** sole canonical authority source.
 
-The former **WorthWyl Forge** implementation is not discarded. Its useful workflow, creation, project-domain, diligence, benchmark, canon, quarantine, and operator capabilities become the retained **Forge engine** inside **WorthWyl Studio**.
-
-This creates a clean separation:
-
-- **WorthWyl Studio** = public/product/operator identity.
-- **Forge engine** = internal creation/workflow implementation.
-- **Commander OS** = operational control surface for governed execution.
-- **Convertible Cranium** = governance substrate and authority architecture.
-- **Kernel** = sole canonical authority.
-
-The Forge engine is therefore an implementation component, not a second governance substrate.
+The Forge engine is an implementation component, not a second governance substrate.
 
 ## Current architecture alignment
 
-Studio operates within the **Dual-Substrate / Quad-Engine** model:
+1. **Engine 1, Synapse:** proposal/context processing, evidence binding, assessment, trace.
+2. **Engine 2A, Substrate A:** Constitutional Authority, “May we?”
+3. **Engine 2B, Substrate B:** Evidence Grounding, “Is it so?”
+4. **Engine 3, Kernel:** canonical convergence and authority transition.
 
-1. Cranium AI — intelligence and orchestration.
-2. Synapse — evidence and assessment.
-3. Governance Review Juror One — constructive review.
-4. Governance Review Juror Two — adversarial review.
-
-Juror One and Juror Two have deliberately different mandates and processes. Neither can issue authority.
+Cranium AI is a cognition/application surface, not an authority-path engine. Neither substrate grants authority. Convergence is not voting.
 
 ## Authority boundary
 
-Studio and the Forge engine may create proposals, assess evidence, stage work, render interfaces, package diligence, and coordinate bounded execution.
-
-They may not:
-- issue canonical authority;
-- issue canonical receipts;
-- mutate Kernel canonical state directly;
-- redefine Kernel semantics;
-- treat local consensus as authority;
-- promote fixtures or simulations into evidence;
-- bypass Circuit Breaker / COMA containment;
-- convert browser state or local memory into canonical continuity.
+Studio and the Forge engine may create proposals, stage work, render interfaces, package diligence, and coordinate bounded workflows. They may not issue canonical authority or receipts, mutate Kernel state directly, redefine Kernel semantics, treat local consensus as authority, promote fixtures/simulations into evidence, bypass COMA containment, or convert browser state into canonical continuity.
 
 ## Runtime path
 
-Listener → Studio / Commander operational context → Cranium AI proposal → Synapse assessment → Juror One + Juror Two review → governed request → Kernel decision → execution → receipt → Miracle Memory
+Listener → Synapse → Substrate A + Substrate B → Kernel convergence → governed execution → receipt / proof / lineage.
 
-Circuit Breaker / COMA remains cross-cutting and may interrupt or roll back the runtime path.
-
-## Naming rule
-
-Current documentation must use **WorthWyl Studio** when referring to the human-facing product surface.
-
-Use **Forge engine** only when referring to the retained implementation/workflow layer.
-
-Do not describe Forge as the current authority architecture.
+Studio and Commander may provide the operator context around this path but do not become authority sources. Circuit Breaker / COMA remains cross-cutting and may interrupt or constrain runtime behavior.
 
 ## Evidence rule
 
-Studio claims must remain evidence-scoped. A local demonstration can prove the behavior of the local implementation only. Kernel authority claims require Kernel evidence. Android claims require Android evidence. Acquisition claims require acquisition evidence.
-
-## Research alignment
-
-Current public AI-governance guidance remains consistent with the Studio separation model, but it does not certify the product. NIST's AI RMF 1.0 uses Govern, Map, Measure, and Manage as its four core functions and is being revised; NIST also released a 2026 concept note for a Trustworthy AI in Critical Infrastructure profile. OWASP's 2026 Agentic Applications guidance and its 2026 agent-security resources emphasize authorization boundaries, least privilege, human approval for high-impact actions, and controls around agent-to-system and agent-to-agent execution. These references support the threat-model direction only; they are not certification evidence.
-
-Reference sources: NIST AI RMF (https://www.nist.gov/itl/ai-risk-management-framework); OWASP Top 10 for Agentic Applications 2026 (https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/).
-
-## Acquisition position
-
-The hybrid improves continuity of the existing engineering asset without creating a second authority boundary. The product name becomes cleaner while preserving the useful Forge implementation and its provenance.
+Studio claims must remain evidence-scoped. A local demonstration proves only the behavior actually exercised in that local implementation. Kernel authority claims require Kernel evidence; Android claims require Android evidence; acquisition claims require acquisition evidence. This document does not claim standards certification, legal novelty, or completed production readiness.
 
 **WorthWyl Studio is where the human creates and operates. Convertible Cranium is where authority is governed.**

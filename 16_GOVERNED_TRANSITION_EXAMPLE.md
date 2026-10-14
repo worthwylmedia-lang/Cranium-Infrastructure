@@ -1,78 +1,79 @@
 # Convertible Cranium Governed Transition Example
-**Status:** Architecture example
-**Date:** 2026-09-30
+
+**Status:** Architecture example, not proof that every integration implements this exact flow.
 
 ## Scenario
-A user asks the Commander to perform a consequential operation, such as modifying a protected project resource.
 
-The example is intentionally abstract. It documents the governance transition rather than granting any real-world capability.
+A user asks Commander to modify a protected project resource. The example traces the intended governance path without granting real-world capability.
 
-## Step 1: Intent
-The user expresses the desired outcome through Commander.
-State: 'INTENT_RECEIVED'
-The system records the request context required to evaluate it.
+## 1. Intent and ingress
 
-## Step 2: Cognition
-Cranium AI interprets the request and proposes a concrete operation.
-State: 'PROPOSED'
-The proposal may include tool selection, parameters, dependencies, and expected result. None of that is authority.
+The request enters through **Cranium Listener**, which treats input as untrusted. Commander provides the human-facing operational context but cannot authorize the operation.
 
-## Step 3: Evidence assessment
-Synapse evaluates the proposal against available evidence, identity, scope, trust context, and relevant constraints.
-State: 'ASSESSED'
-If evidence is insufficient, the system does not manufacture certainty. It can request clarification, gather permitted evidence, or stop.
+State: `INTENT_RECEIVED`
 
-## Step 4: Independent governance review
-Governance Review Juror One evaluates coherence, justification, and evidence sufficiency using its constructive review process.
-State: 'JUROR_ONE_REVIEWED'
+## 2. Proposal and evidence binding
 
-Governance Review Juror Two independently evaluates contradiction, failure modes, boundary violations, and rejection conditions using its adversarial review process.
-State: 'JUROR_TWO_REVIEWED'
+**Engine 1, Synapse** constructs a bounded proposal, derives relevant context, binds evidence references, performs its defined assessment, and commits the trace required by the contract.
 
-Neither juror issues authority. Their distinct review outputs become governed evidence for the Kernel decision.
+State: `PROPOSED / ASSESSED`
 
-## Step 5: Authority decision
-The Kernel evaluates the governed request, evidence, both independent review results, capability boundaries, receipts, replay state, lifecycle state, and constitutional constraints.
+Cranium AI may assist with interpretation and proposal generation, but its output is not authority. If context or evidence is insufficient, the system must not manufacture certainty.
 
-Possible states include:
-- 'AUTHORIZED'
-- 'DENIED'
-- 'QUARANTINED'
+## 3. Independent substrate assessments
 
-The AI and both jurors do not select among these states. The Kernel alone issues canonical authority.
+**Engine 2A, Substrate A: Constitutional Authority** evaluates constitutional admissibility, policy constraints, scope, prohibited actions, and approval requirements.
 
-## Step 6: Execution
-Only an authorized transition may cross into execution.
-State: 'EXECUTING'
-Commander or the governed runtime performs the action through the approved execution path.
+Question: **“May we?”**
 
-## Step 7: Result
-The runtime reports what actually happened.
-State: 'COMPLETED' or an explicit failure state.
+**Engine 2B, Substrate B: Evidence Grounding** evaluates evidence provenance, integrity, contradiction, freshness/relevance, and sufficiency.
+
+Question: **“Is it so?”**
+
+These are distinct review paths. Neither substrate issues canonical authority. Their findings are evidence inputs to the Kernel, not votes.
+
+## 4. Kernel convergence and authority decision
+
+**Engine 3, Convertible Cranium Kernel** validates the proposal, A/B findings, applicable version bindings, capability and authorization context, replay state, current state, evidence lineage, and required convergence conditions.
+
+Possible outcomes include an authorized transition, explicit denial/rejection, or quarantine according to the applicable contract. The Kernel alone issues canonical authority.
+
+State: `AUTHORIZED`, `DENIED`, or `QUARANTINED`
+
+No model or substrate selects the canonical outcome. Failure to meet the required conditions must fail closed.
+
+## 5. Governed execution
+
+Only a valid Kernel-authorized transition may enter the approved execution path.
+
+State: `EXECUTING`
+
+Commander or the governed runtime performs the operation within the granted scope. A local UI state or proposed tool call is not proof that execution occurred.
+
+## 6. Result, receipt, and continuity
+
+The runtime reports the observed outcome. The system records the governed transition and relevant receipt/proof/lineage. Miracle Memory may preserve continuity and recovery-relevant state under its governance rules.
+
+State: `COMPLETED` or an explicit failure/recovery state.
+
 A model-generated claim that something happened is not sufficient evidence that it happened.
 
-## Step 8: Receipt and continuity
-The system records the authoritative decision and execution result. Miracle Memory may preserve authorized continuity and recovery-relevant state according to its governance rules.
+## 7. Critical failure and containment
 
-## Step 9: Critical failure
-If the runtime or cognitive evaluation reaches a critical containment condition, the Session Circuit Breaker can enter a tripped state. Execution is fenced, the system rolls back toward a defined checkpoint where supported, and recovery proceeds through the controlled state machine.
+Circuit Breaker / COMA may fence execution, freeze or quarantine state, preserve evidence, and permit controlled recovery where supported by the implementation contract. It remains a cross-cutting safety mechanism, not a second authority source.
 
 ## The important distinction
+
 A conventional agent loop can be summarized as:
-'think -> call tool -> observe -> continue'
 
-The Convertible Cranium governed loop is:
-'intent -> propose -> assess -> authorize -> execute -> receipt -> continue'
+`think → call tool → observe → continue`
 
-That extra boundary is the architectural point. It is not decorative UI, and it is not a prompt instruction asking a model to behave itself.
+The intended Convertible Cranium governed path is:
+
+`intent → Synapse proposal/evidence → Substrate A + Substrate B → Kernel decision → governed execution → receipt/proof/lineage`
+
+The extra authority boundary is architectural. It is not decorative UI or a prompt instruction asking a model to behave itself.
 
 ## Evidence discipline
-This example is a reference transition. It must not be presented as evidence that every future product integration already implements every transition shown here. Each deployed surface must be validated against its actual code, configuration, and runtime evidence.
 
-## Current architecture baseline
-
-This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
-
-Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
-
-The former Eight-Plane and Dual-Engine descriptions are historical framing only and must not be read as the current governance model.
+This is a reference transition. It must not be presented as proof that every future product integration already implements every state shown here. Each deployed surface must be checked against its actual code, configuration, tests, and runtime evidence.

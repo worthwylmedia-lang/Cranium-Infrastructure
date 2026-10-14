@@ -1,46 +1,32 @@
 # Convertible Cranium — Category Definition
 
-## Infrastructure Ecosystem • Authority-Bound • Dual-Substrate / Quad-Engine Governance Substrate
+## Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate
 
-### Category Name
+Convertible Cranium uses this as its proposed category framing for an infrastructure architecture, not an individual model, agent framework, or application.
 
-Infrastructure Ecosystem Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate
+## Definition
 
-Convertible Cranium uses this as its current proposed category definition. The category describes an infrastructure architecture, not an individual product, model, agent framework, or application.
+Convertible Cranium is an authority-bound governance architecture designed to separate model-generated cognition from canonical authority while binding constitutional review, evidence grounding, execution, continuity, recovery, and proof to explicit system boundaries.
 
-### Category Definition
+> **Cognition may come from anywhere. Authority comes only through Convertible Cranium.**
 
-Convertible Cranium is an infrastructure-grade ecosystem built as an authority-bound dual-substrate / quad-engine governance architecture. It separates intelligence, evidence assessment, independent governance review, and canonical authority while binding continuity, execution, recovery, and evidence to explicit governance boundaries.
+## Current engines
 
-> Cognition may come from anywhere. Authority comes only through Cranium.
+1. **Engine 1, Synapse:** bounded proposal/context processing, evidence binding, assessment, and trace commitment.
+2. **Engine 2A, Constitutional Authority:** constitutional admissibility, policy constraints, scope, and approval requirements. **“May we?”**
+3. **Engine 2B, Evidence Grounding:** provenance, integrity, contradiction, freshness/relevance, and sufficiency. **“Is it so?”**
+4. **Engine 3, Convertible Cranium Kernel:** canonical convergence and the sole authority transition boundary.
 
-### Current engines
+Cranium AI is a cognition/application surface, not an authority-path engine. Substrates A and B have distinct responsibilities and neither grants authority. Convergence is not voting.
 
-1. Cranium AI: intelligence, orchestration, proposal generation, bounded reasoning.
-2. Synapse: evidence assessment, trust evaluation, and bounded risk analysis.
-3. Governance Review Juror One: constructive review of coherence, justification, and evidence sufficiency.
-4. Governance Review Juror Two: adversarial review of contradiction, failure modes, boundary violations, and rejection conditions.
+## Authority boundary
 
-The jurors deliberately use different review mandates and processes. They review; they do not authorize.
+The Kernel is the sole canonical authority source. Commander OS, Listener, AI, Synapse, either substrate, Miracle Memory, Circuit Breaker / COMA, receipts, attestations, and external systems cannot create a second authority source.
 
-### Authority boundary
+## Evidence boundary
 
-The Convertible Cranium Kernel is the sole canonical authority source. Commander OS, Listener, AI, Synapse, either juror, Miracle Memory, Circuit Breaker / COMA, receipts, attestation, and external systems cannot create a second authority source.
+This is a proposed category definition, not proof of legal novelty, patentability, market acceptance, independent security certification, or completed production readiness. Those claims require separate legal, technical, and market evidence.
 
-### Operational surfaces
+## Historical terminology
 
-Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery.
-
-### Historical terminology
-
-The former Eight-Plane Architecture remains a historical subsystem taxonomy. The former Dual-Engine model remains a historical cognition-versus-authority framing. Both are superseded as the current canonical architecture by Dual-Substrate / Quad-Engine.
-
-### Evidence boundary
-
-Evidence must remain tied to exact revisions, commands, environments, outputs, and limitations. Architectural documentation is not substituted for runtime proof.
-
-### Category thesis
-
-> Models may propose cognition. Only Cranium determines whether cognition acquires authority.
-
-For technical precision, the canonical authority source is the Convertible Cranium Kernel. No reviewer, model, memory, UI, runtime, or consensus path can substitute for it.
+Eight-Plane, Dual-Engine, and earlier juror-centered descriptions are historical framing only. They must not be presented as the current canonical governance model.

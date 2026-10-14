@@ -2,38 +2,35 @@
 
 ## Convertible Cranium
 
-Category: Infrastructure Ecosystem Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate
+**Category framing:** Authority-bound Dual-Substrate / Quad-Engine Governance Substrate.
 
-Invariant: No combination of non-authoritative signals may synthesize canonical authority. Authority exists only when the Kernel issues a governed transition under applicable constraints.
+**Invariant:** No combination of non-authoritative signals may synthesize canonical authority. Authority exists only when the Convertible Cranium Kernel issues a governed transition under applicable constraints.
 
-Architecture: Four engines across two governance substrates: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two.
+## Four engines
 
-Juror separation: Juror One performs constructive coherence/evidence review. Juror Two performs adversarial contradiction/boundary review. They use distinct mandates and processes and neither issues authority.
+1. **Engine 1, Synapse:** proposal/context processing, evidence binding, assessment, and trace.
+2. **Engine 2A, Substrate A:** Constitutional Authority, “May we?”
+3. **Engine 2B, Substrate B:** Evidence Grounding, “Is it so?”
+4. **Engine 3, Kernel:** canonical convergence, authority transition, durable commit, receipt, proof, and lineage.
 
-Authority: Kernel-issued, constitutionally constrained, scope-bound, replay-resistant, integrity-checked.
+Cranium AI is a cognition/application surface, not an authority-path engine. Substrates A and B have distinct responsibilities and neither issues authority. Convergence is not voting.
 
-Ingress: Cranium Listener is untrusted ingress and cannot authorize.
+## Runtime and continuity
 
-Operations: Commander OS is the operational control surface.
+- **Listener:** untrusted ingress.
+- **Commander OS:** operational control surface, not an authority source.
+- **Miracle Memory:** governed continuity, identity, contradiction handling, quarantine, journal, and recovery context.
+- **Circuit Breaker / COMA:** cross-cutting containment and recovery.
+- **Receipts / attestation:** evidence and provenance, not authority.
 
-Continuity: Miracle Memory provides governed continuity with contradiction handling, quarantine, journal integrity, identity, and recovery semantics.
+## Evidence posture
 
-Recovery: COMA / Session Circuit Breaker provides cross-cutting containment, rollback, generation fencing, snapshot integrity, and controlled half-open recovery.
+The binder records a project-run Kernel verification checkpoint dated 2026-09-30, with commands recorded as completing with exit code 0 within the documented scope. This is self-attested project evidence, not an independent third-party audit. The Wave V ledger records 17 hostile attack conditions, 9 controls/checks, and 3 pending environment gates.
 
-Threats: Nine-domain threat analysis plus multi-vector attack paths and defense mapping.
+Chromium Edition integration payloads and plans are documented; native x86-64 image build, boot, runtime validation, and verified-boot evidence remain pending.
 
-Verification: 2026-09-30 clean-clone Kernel diligence checkpoint completed with exit code 0 within the documented scope.
+## Operating thesis
 
-Chromium Edition: Architecture and integration payload documented; bootable x86-64 image, runtime validation, and verified-boot evidence remain pending.
+**Cognition proposes. Substrates assess. The Kernel decides. Execution obeys. Continuity is governed. Recovery is controlled.**
 
-Historical framing: Eight-Plane and Dual-Engine descriptions are historical taxonomy, not the current governance architecture.
-
-### Operating Thesis
-
-Cognition proposes. Independent review challenges and evaluates. The Kernel decides. Execution obeys. Continuity is governed. Recovery is deterministic.
-
-### Authority Boundary
-
-Authority comes only through Convertible Cranium.
-
-This is an orientation artifact. It does not replace source code, executable verification records, release artifacts, or runtime evidence.
+This orientation sheet does not replace source code, executable verification records, release artifacts, or runtime evidence.

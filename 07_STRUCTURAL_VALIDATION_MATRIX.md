@@ -16,7 +16,7 @@ This matrix is the pre-migration acceptance gate for the clean acquisition surfa
 
 | Validation Item | Requirement | Evidence | Status |
 |---|---|---|---|
-| Category Definition | Category and boundaries are explicit | `CATEGORY_DEFINITION.md` | PENDING |
+| Category Definition | Category and boundaries are explicit | `02_CATEGORY_DEFINITION.md` | PENDING |
 | Category Research | Research is separated from legal conclusions | `CATEGORY_RESEARCH_PAPER.md` | PENDING |
 | Authority Invariant | Formal, testable, corpus-wide invariant exists | `03_AUTHORITY_INVARIANT.md` | PENDING |
 | Invariant Propagation | Core corpus references the invariant consistently | Corpus scan | PENDING |
@@ -26,17 +26,17 @@ This matrix is the pre-migration acceptance gate for the clean acquisition surfa
 
 | Validation Item | Requirement | Evidence | Status |
 |---|---|---|---|
-| Dual-Substrate / Quad-Engine Architecture | Four engines, two governance substrates, operational surfaces, safety boundary, and Kernel authority boundary documented | `ARCHITECTURE.md` | PENDING |
+| Dual-Substrate / Quad-Engine Architecture | Four engines, two governance substrates, operational surfaces, safety boundary, and Kernel authority boundary documented | `05_ARCHITECTURE.md` | PENDING |
 | Subsystems | Commander, AI, Synapse, Kernel, Memory, COMA documented | Subsystem specifications | PENDING |
-| Constitution | Durable directives and invariants documented | `CONSTITUTION.md` | PENDING |
-| Authority Flow | Full governed transition path documented | `AUTHORITY_FLOW.md` | PENDING |
-| Governed Transition | Consequential operation traced end to end | `GOVERNED_TRANSITION_EXAMPLE.md` | PENDING |
+| Constitution | Durable directives and invariants documented | `27_CONSTITUTION.md` | PENDING |
+| Authority Flow | Full governed transition path documented | `12_AUTHORITY_FLOW.md` | PENDING |
+| Governed Transition | Consequential operation traced end to end | `16_GOVERNED_TRANSITION_EXAMPLE.md` | PENDING |
 
 ## 3. Authority Boundary
 
 | Validation Item | Requirement | Evidence | Status |
 |---|---|---|---|
-| Canonical Source | Canonical authority resolves only to Kernel | `AUTHORITY_MODEL.md`, `KERNEL.md`, `KERNEL_PIN` | PENDING |
+| Canonical Source | Canonical authority resolves only to Kernel | `06_AUTHORITY_MODEL.md`, `24_KERNEL.md`, `KERNEL_PIN` | PENDING |
 | Non-Emergence | No non-authoritative signal can synthesize authority | `03_AUTHORITY_INVARIANT.md` + tests | PENDING |
 | Receipt Integrity | Receipts are integrity-checked and replay-resistant | Verification record | PENDING |
 | Denial Semantics | Denial is explicit and testable | Verification record | PENDING |
@@ -47,8 +47,8 @@ This matrix is the pre-migration acceptance gate for the clean acquisition surfa
 
 | Validation Item | Requirement | Evidence | Status |
 |---|---|---|---|
-| Threat Domains | Nine threat domains mapped across the four engines, operational surfaces, safety controls, and external boundaries | `THREAT_MODEL.md` | PENDING |
-| Multi-Vector Analysis | Chained cross-plane attacks documented | `MULTIVECTORATTACK_ANALYSIS.md` | PENDING |
+| Threat Domains | Nine threat domains mapped across the four engines, operational surfaces, safety controls, and external boundaries | `13_THREAT_MODEL.md` | PENDING |
+| Multi-Vector Analysis | Chained cross-plane attacks documented | `14_MULTIVECTOR_ATTACK_ANALYSIS.md` | PENDING |
 | Attack-to-Control Mapping | Threats identify applicable controls or evidence gaps | Threat/control matrix | PENDING |
 | Invariant Stress Tests | Authority-violation paths are explicitly tested | Verification corpus | PENDING |
 | Replay and Tamper Tests | Replay, tamper, rogue-key, and stale-state defenses have evidence | Verification record | PENDING |
@@ -57,17 +57,17 @@ This matrix is the pre-migration acceptance gate for the clean acquisition surfa
 
 | Validation Item | Requirement | Evidence | Status |
 |---|---|---|---|
-| Verification Contract | Commands and acceptance boundaries are documented | `VERIFICATION.md` | PENDING |
+| Verification Contract | Commands and acceptance boundaries are documented | `17_VERIFICATION.md` | PENDING |
 | Kernel Checkpoint | September 30 clean-clone verification preserved | Kernel verification record | PENDING |
 | Executable Evidence | Denial, replay, attestation, recovery, and constitutional checks recorded | Verification record | PENDING |
 | Evidence Integrity | Revision, digest, command, runtime, and limitation data are preserved | Evidence records | PENDING |
-| ChromiumOS Boundary | Image build/boot/runtime state is not overstated | `CHROMIUM_EDITION.md` | PENDING |
+| ChromiumOS Boundary | Image build/boot/runtime state is not overstated | `20_CHROMIUM_EDITION.md` | PENDING |
 
 ## 6. IP, Boundary, and Provenance
 
 | Validation Item | Requirement | Evidence | Status |
 |---|---|---|---|
-| IP/Product Boundary | Product surface and retained substrate are distinguished | `IP_AND_PRODUCT_BOUNDARY.md` | PENDING |
+| IP/Product Boundary | Product surface and retained substrate are distinguished | `19_IP_AND_PRODUCT_BOUNDARY.md` | PENDING |
 | Provenance | Engineering evolution and research lineage are preserved | `provenance/` | PENDING |
 | Historical Repositories | Legacy account remains available for deeper provenance | Audit evidence | PENDING |
 | Acquisition Surface | Clean repository is curated rather than a raw mirror | Binder structure | PENDING |
@@ -115,7 +115,7 @@ Each answer must be supported by executable evidence where the implementation ex
 
 ## Current architecture baseline
 
-This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
+The canonical authority path is Listener → Engine 1 Synapse → independent Engine 2A Substrate A (Constitutional Authority, “May We?”) and Engine 2B Substrate B (Evidence Grounding, “Is It So?”) → Engine 3 Cranium Kernel convergence → governed execution and receipt/lineage. Cranium AI is a cognition/application surface, not an authority-path engine. Neither substrate grants canonical authority; the Kernel remains the sole canonical authority source.
 
 Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
 

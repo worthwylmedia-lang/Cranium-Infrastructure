@@ -42,7 +42,7 @@ This roadmap is a proposed product direction, not a market-validated demand clai
 
 ## Current architecture baseline
 
-This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
+The canonical authority path is Listener → Engine 1 Synapse → independent Engine 2A Substrate A (Constitutional Authority, “May We?”) and Engine 2B Substrate B (Evidence Grounding, “Is It So?”) → Engine 3 Cranium Kernel convergence → governed execution and receipt/lineage. Cranium AI is a cognition/application surface, not an authority-path engine. Neither substrate grants canonical authority; the Kernel remains the sole canonical authority source.
 
 Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
 

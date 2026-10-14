@@ -1,49 +1,41 @@
-# OS Architecture Poster
+# Convertible Cranium — OS Architecture Poster
 
-One-Page Architectural Summary • Current Binder Version
+**One-page architecture reference · current canonical model**
 
-## Convertible Cranium — OS Architecture Poster
+## Category
 
-### Category
+Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate.
 
-Infrastructure Ecosystem Authority-Bound Dual-Substrate / Quad-Engine Governance Substrate
+## Invariant
 
-### Invariant
+**No combination of non-authoritative signals may synthesize canonical authority.** The Kernel alone issues governed authority transitions.
 
-No combination of non-authoritative signals may synthesize canonical authority.
-Authority exists only when the Kernel issues a governed transition.
+## Four engines
 
-### Four Engines / Two Substrates
+- **Engine 1: Synapse** — proposal, context, evidence binding, assessment, trace.
+- **Engine 2A: Substrate A** — Constitutional Authority, “May we?”
+- **Engine 2B: Substrate B** — Evidence Grounding, “Is it so?”
+- **Engine 3: Convertible Cranium Kernel** — convergence, authority transition, durable commit, receipt, proof, lineage.
 
-- Cranium AI: intelligence and orchestration.
-- Synapse: evidence and assessment.
-- Governance Review Juror One: constructive coherence and evidence review.
-- Governance Review Juror Two: adversarial contradiction and boundary review.
+Cranium AI is a cognition/application surface, not an authority-path engine. Neither substrate is authoritative. **Convergence is not voting.**
 
-The jurors are independently constituted with different review mandates and processes. Neither is authoritative.
+## Runtime surfaces
 
-### Authority and Runtime
+- **Listener:** untrusted ingress.
+- **Commander OS:** operational control surface.
+- **Miracle Memory:** governed continuity.
+- **Circuit Breaker / COMA:** cross-cutting containment and recovery.
+- **Receipts / attestation:** evidence and provenance, not authority.
 
-- Kernel: sole canonical authority.
-- Commander OS: operational control surface.
-- Cranium Listener: untrusted ingress.
-- Miracle Memory: governed continuity.
-- Circuit Breaker / COMA: cross-cutting containment and recovery.
-- Receipts / Attestation: evidence and provenance, not authority.
+## Governed transition
 
-### Governed Transition
+Listener → Synapse → Substrate A + Substrate B → Kernel convergence → governed execution → receipt / proof / lineage.
 
-intent → AI proposal → Synapse assessment → Juror One / Juror Two review → governed request → Kernel decision → execution → receipt → continuity
+## Evidence status
 
-### Historical framing
+- Kernel verification checkpoint: project-recorded, self-attested, dated 2026-09-30.
+- Wave V ledger: 17 hostile attack conditions, 9 controls/checks, 3 pending environment gates.
+- Chromium Edition: integration work and plans documented; native x86-64 build, boot, runtime validation, and verified-boot evidence pending.
+- Legal chain of title, patentability, and market validation: require separate diligence.
 
-Eight-Plane and Dual-Engine are retained only as historical taxonomy.
-
-### Verification
-
-September 30, 2026 Kernel verification — PASS within documented scope.
-ChromiumOS runtime evidence — PENDING.
-
-### Evidence Rule
-
-Architecture and verification claims remain bounded by the evidence recorded in the binder. Pending ChromiumOS implementation evidence is not represented as complete.
+This poster summarizes architecture; it is not a substitute for source, tests, or independent review.

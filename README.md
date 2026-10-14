@@ -1,184 +1,110 @@
-# Convertible Cranium — Acquisition Binder
+# Convertible Cranium
+## Attorney Review & Technical Diligence Binder
 
-## Governed-Intelligence Substrate
+**Creator / intended personal IP owner:** William (Wyl) Mathes
+**Purpose:** A navigable, evidence-linked record for intellectual-property counsel, technical reviewers, and prospective diligence partners.
+**Evidence posture:** Architecture and implementation claims are separated from self-attested tests, pending validation, and legal questions.
 
-Convertible Cranium is documented here as an authority-bound, dual-substrate / quad-engine governance substrate. This binder is an acquisition-facing evidence index, not a second authority implementation.
+> **Cognition may come from anywhere. Authority comes only through Convertible Cranium.**
 
-> Cognition proposes. Authority decides. Execution obeys. Continuity is governed. Recovery is deterministic.
+Convertible Cranium is an authority-bound governance architecture designed to keep model-generated cognition separate from canonical authority. Models and application surfaces may propose; independently constituted governance substrates assess; the Convertible Cranium Kernel alone determines whether a governed authority transition is accepted.
 
-## Claim status at a glance
+This repository is an acquisition-facing documentation and evidence index. It is not a second implementation of the Kernel, a legal opinion, or a claim of independent certification.
 
-| Claim | Evidence path | Status |
+---
+
+## Start here
+
+| If you are… | Begin with | Purpose |
 |---|---|---|
-| Canonical Kernel evidence is standardized on clean commit `0d0ae41f78e3f23da073390285d401c4a215dc6a` | KERNEL_PIN, evidence/verification-records/KERNEL_VERIFICATION_2026-09-30.md | Verified checkpoint |
-| Kernel clean-clone verification completed with documented commands | KERNEL_PIN, 17_VERIFICATION.md | Self-attested executable checkpoint |
-| Wave V security suite records 17 hostile attacks, 9 controls/checks, and 3 pending evidence gates | evidence/WAVE_V_BURN_RESULTS_2026-09-30.md | Verified on the standardized clean checkout; 3 environment gates pending |
-| Canonical custody hardening resists a valid CORE signature without custody proof | Kernel Wave V evidence | Verified on tested checkout; custody is process-local, not HSM |
-| Signed Constitution loader rejects tampering, foreign signer, and version mismatch | Kernel signed-Constitution check | Verified on tested checkout |
-| Chromium Edition integration payload/build scripts exist | 20_CHROMIUM_EDITION.md, root ChromiumOS plans | Verified as staged integration work |
-| Bootable ChromiumOS image and native x86-64 runtime/verified-boot validation | CHROMIUMOS_BUILD_BOOT_PLAN.md, VERIFIED_BOOT_EVIDENCE_PLAN.md | Pending native x86-64 build environment |
-| Market demand, security certification, legal novelty, or patentability | 18_DILIGENCE.md | Not claimed |
-| Chain of title between legacy engineering account and acquisition surface | 19_IP_AND_PRODUCT_BOUNDARY.md, provenance/ | Diligence item, not silently assumed |
+| **IP attorney** | [Attorney Review Start Here](ATTORNEY_REVIEW_START_HERE.md) and [IP and Product Boundary](19_IP_AND_PRODUCT_BOUNDARY.md) | First-meeting brief, ownership questions, scope, exclusions, and retained components |
+| **Attorney or diligence lead** | [Diligence Register](18_DILIGENCE.md) and [Implementation Status & Gap Register](40_IMPLEMENTATION_STATUS_AND_GAP_REGISTER.md) | Known gaps, non-claims, release gates, and evidence boundaries |
+| **Technical reviewer** | [Architecture](05_ARCHITECTURE.md) | Canonical system path and component responsibilities |
+| **Security reviewer** | [Threat Model](13_THREAT_MODEL.md) and [Attack Analysis](14_MULTIVECTOR_ATTACK_ANALYSIS.md) | Threat boundaries and mapped controls |
+| **Verification reviewer** | [Verification](17_VERIFICATION.md) and [Evidence Ledger](evidence/TEST_AND_ATTACK_LEDGER_2026-09-30.md) | Recorded checks, test classifications, and open gates |
+| **Chromium Edition reviewer** | [Chromium Edition](20_CHROMIUM_EDITION.md) | Staged integration versus boot/runtime evidence |
+| **Executive reader** | [Executive Summary](00_EXECUTIVE_SUMMARY.md) | Concise explanation of the system and current limits |
 
-### Reviewer rule
+## Architecture in one view
 
-Every material claim should be traceable as:
+```text
+UNTRUSTED INGRESS
+        |
+     LISTENER
+        |
+ ENGINE 1 · SYNAPSE
+ proposals, context, evidence binding
+        |
+        +-------------------------------+
+        |                               |
+ ENGINE 2A · SUBSTRATE A          ENGINE 2B · SUBSTRATE B
+ Constitutional Authority        Evidence Grounding
+ "MAY WE?"                       "IS IT SO?"
+        |                               |
+        +---------------+---------------+
+                        |
+              ENGINE 3 · CRANIUM KERNEL
+          canonical convergence and authority
+                        |
+               GOVERNED EXECUTION
+                        |
+               RECEIPT / PROOF / LINEAGE
+```
 
-**claim → binder chapter → repository + commit → command/test → artifact/output → status**
+**Boundary rules**
 
-A narrative statement without an executable artifact or explicit self-attestation/pending label is not treated as independent verification.
+- Synapse proposes and binds context/evidence; it does not grant authority.
+- Substrate A evaluates constitutional admissibility; Substrate B evaluates evidence grounding. Neither is authoritative.
+- The Kernel is the sole canonical authority boundary.
+- Commander OS is an operational interface, not the authority source.
+- Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting containment and recovery.
+- Convergence is not voting. If the required conditions do not converge, authority is not granted.
 
-## Reproducibility checkpoint
+Cranium AI is a cognition/application surface, not an additional authority-path engine. Older Eight-Plane, Dual-Engine, or earlier juror-centered descriptions are historical framing and must not be mistaken for the current canonical path.
 
-The standardized Kernel evidence revision is `0d0ae41f78e3f23da073390285d401c4a215dc6a`, a clean commit created after the Wave V classification/proof-reporting corrections. The prior `e36bdba...` checkpoint is historical and is not the revision used for the current Wave V ledger. The recorded command sequence is:
+## Evidence status at a glance
 
-    npm ci
-    npm run verify
-    npm run verify:denial-semantics
+| Area | Current documented posture | What remains open |
+|---|---|---|
+| Kernel verification | A project-recorded clean-checkout verification checkpoint is documented for commit `0d0ae41f78e3f23da073390285d401c4a215dc6a` | Independent reproduction by counsel/reviewer; confirm source access and revision |
+| Wave V security ledger | Records 17 hostile attack conditions, 9 controls/checks, and 3 pending environment gates | Resolve and document the remaining gates |
+| Custody boundary | Tested process-local custody behavior is documented | Do not represent it as HSM/KMS or hardware-backed custody |
+| Signed Constitution | Project-recorded checks for tampering, foreign signer, and version mismatch are documented | Independent reproduction |
+| Chromium Edition | Integration payloads and build/validation plans are documented | Native x86-64 image build, boot, runtime acceptance, and verified-boot evidence |
+| Legal ownership | Intended personal ownership position and technical provenance are documented | Counsel must verify chain of title, contributors, assignments, licenses, and third-party obligations |
+| Market / legal status | No unsupported claim is made | Market validation, patentability, novelty, and independent certification are not established by this binder |
 
-Recorded local environment: Node v24.18.0, clean working tree at the standardized revision, Android/arm64 Termux, verification date 2026-09-30, exit code 0. The target Chromium Edition platform remains native x86-64; Android/arm64 is a development/verification environment, not the target OS runtime.
+**Evidence vocabulary:** *Verified* means supported by a named artifact or executable check; *self-attested* means recorded by project execution without independent third-party verification; *pending* means a named gate remains open; *not claimed* means the binder deliberately does not assert it.
 
-This is a self-attested executable checkpoint, not an independent third-party audit. A stranger must have access to the exact Kernel revision and its dependency lockfile to reproduce it. The current acquisition binder is public, while the historical Kernel path may be inaccessible to a reviewer using a different authenticated account. That access/provenance boundary is therefore a diligence item, not a hidden assumption.
+## Repository and source boundaries
 
-The full output is retained in the verification record rather than summarized as a bare “pass.” The reviewer should independently rerun the commands and compare the observed output, runtime, lockfile, and repository revision.
+- **Public documentation front door:** [worthwylmedia-lang](https://github.com/worthwylmedia-lang)
+- **Primary public binder:** [Cranium-Infrastructure](https://github.com/worthwylmedia-lang/Cranium-Infrastructure)
+- **Engineering/source account:** [worthwyl2022-cloud](https://github.com/worthwyl2022-cloud)
+- **Canonical Kernel repository:** [cranium-kernel](https://github.com/worthwyl2022-cloud/cranium-kernel)
+- **Commander/operator implementation:** [cranium-ultra-platform](https://github.com/worthwyl2022-cloud/cranium-ultra-platform)
+- **Acquisition demonstration:** [cranium-acquisition-demo-drive](https://github.com/worthwyl2022-cloud/cranium-acquisition-demo-drive)
 
-## Attack and test ledger
+The public binder and the engineering account serve different purposes. Repository history is relevant technical provenance, but GitHub account control and commit records alone do not establish legal title. Access, ownership, assignments, licenses, and contributor rights require separate diligence.
 
-The canonical Wave V ledger is `evidence/TEST_AND_ATTACK_LEDGER_2026-09-30.md`. It separates **17 hostile attack conditions** from **9 controls/checks** and **3 pending runtime gates**. The 17/9 split is classification, not a claim that every control is an attack. V3-A and V4-A retain their deterministic workload counts inside one ledger row each.
+## Reviewer rule
 
-The acquisition stress suite remains a manifest until each case has a real executable binding and captured evidence.
+Trace each material claim through:
 
-## Binder Map
+**claim → document → repository + exact revision → command/test → artifact/output → evidence status**
 
-00 Executive Summary
-01 Binder Introduction
-02 Category Definition and Boundary
-03 Canonical Authority Invariant
-04 Category Research Note
-05 Dual-Substrate / Quad-Engine Architecture
-06 Authority Model
-07 Structural Validation Matrix
-08 Migration Chapter
-09 Acquisition Readiness Chapter
-10 External Reviewer Brief
-11 Architecture Summary Sheet
-12 Authority Flow
-13 Threat Model
-14 Multi-Vector Attack Analysis
-15 Developer Mental Model
-16 Governed Transition Example
-17 Verification
-18 Diligence
-19 IP and Product Boundary
-20 Chromium Edition
-21 Commander OS
-22 Cranium AI
-23 Synapse
-24 Kernel
-25 Miracle Memory
-26 Circuit Breaker / COMA
-27 Constitution
-28 Receipts / Attestation
-29 Founder Foreword
-30 Governed-Intelligence OS Abstract
-31 Table of Contents
-32 Acquisition Q&A Appendix
-33 Reviewer Interview Packet
-34 Governance Substrate Glossary
-35 Binder Finalization Checklist
-36 Governance Substrate Whitepaper
-37 OS Architecture Poster
-38 Human Utility Roadmap
-39 WorthWyl Studio Hybrid Surface
-40 Implementation Status and Gap Register
-
-### Supporting evidence and plans
-
-- CHROMIUMOS_BUILD_BOOT_PLAN.md
-- CHROMIUMOS_RUNTIME_VALIDATION_SUITE.md
-- DEPLOYMENT_READINESS.md
-- VERIFIED_BOOT_EVIDENCE_PLAN.md
-- KERNEL_PIN
-- evidence/
-- provenance/
-- demos/
-
-## Canonical Authority
-
-The binder does not create a second authority implementation. Canonical authority remains the separately maintained Convertible Cranium Kernel.
+A narrative description alone is not proof. A planned component is not a completed release. A project-run test is not an independent audit. A public repository is not, by itself, a chain-of-title instrument.
 
 ## Chromium Edition boundary
 
-**Status: plan/integration payload only.** A bootable ChromiumOS image, native x86-64 build, runtime acceptance, and verified-boot/rootfs evidence are not claimed here until those gates execute on supported native build infrastructure.
+The Chromium Edition is documented as staged integration work until a supported native x86-64 build, boot, runtime acceptance, and verified-boot/rootfs evidence are captured. It must not be described as an official Google product or Google-supported build. ChromiumOS licensing, attribution, trademarks, and third-party obligations remain applicable.
 
-The Chromium Edition must not be presented as an official Google product or Google-supported build. ChromiumOS licensing, attribution, trademarks, and third-party obligations remain applicable.
+## Ownership statement and legal caution
 
-## Ownership and provenance
+The project records **William (Wyl) Mathes** as the intended personal IP owner for the work covered by the acquisition record, subject to attorney verification of chain of title and any applicable prior assignments, third-party rights, licenses, employment/contractor obligations, or other legal encumbrances. No corporate ownership transfer should be inferred absent executed legal instruments.
 
-The acquisition surface is curated from work spanning the current acquisition account and the legacy engineering account. This binder preserves that distinction rather than pretending the account boundary does not exist. Chain-of-title and repository access are diligence items.
+This binder is prepared to support counsel's review. It does not manufacture, transfer, waive, register, or perfect any intellectual-property right, and it is not a substitute for legal advice.
 
-Private credentials, private voice assets, unsupported production claims, and unrelated legacy material do not belong in this binder.
+---
 
-## Evidence posture
-
-This binder intentionally distinguishes:
-
-- **Verified:** backed by an executable test, artifact, or reproducible repository state.
-- **Self-attested:** recorded by the project from its own execution, without independent third-party verification.
-- **Pending:** blocked by an identified environment, deployment, or review gate.
-- **Not claimed:** explicitly outside the evidence established here.
-
-No claim of invulnerability, certification, independent security audit, market validation, or completed ChromiumOS production release is made by this binder.
-
-## Current architecture baseline
-
-This document is part of the current Convertible Cranium documentation set. The canonical architecture is Dual-Substrate / Quad-Engine: Cranium AI, Synapse, Governance Review Juror One, and Governance Review Juror Two. The jurors have deliberately different review mandates and processes and neither issues authority.
-
-Commander OS is the operational control surface. Cranium Listener is untrusted ingress. Miracle Memory provides governed continuity. Circuit Breaker / COMA provides cross-cutting runtime containment and recovery. The Convertible Cranium Kernel remains the sole canonical authority source.
-
-The former Eight-Plane and Dual-Engine descriptions are historical framing only and must not be read as the current governance model.
-
-## Implementation Status Boundary
-
-The current Dual-Substrate / Quad-Engine model is the canonical architecture baseline, not a claim that every named stage is already shipped. The implementation state is tracked explicitly in `40_IMPLEMENTATION_STATUS_AND_GAP_REGISTER.md`.
-
-A component may only be described as **Implemented and Verified** when executable evidence supports that status. Designed components, pending integrations, environment blockers, and unverified mechanisms remain labeled rather than silently promoted by documentation.
-
-This distinction is particularly important for Governance Review Juror One, Governance Review Juror Two, Cranium Listener, Commander-to-Kernel transport, and the Miracle Memory domain model.
-
-## Public Front Door / Production System of Record
-
-This repository is the primary public architecture and acquisition binder for Convertible Cranium. It is intentionally a **curated public front door, not a second production implementation**.
-
-The authoritative production system remains under [`worthwyl2022-cloud`](https://github.com/worthwyl2022-cloud). This account explains and directs; the production account implements and proves.
-
-### Production mapping
-
-| Public architecture concept | Authoritative production surface |
-|---|---|
-| Canonical authority | [`cranium-kernel`](https://github.com/worthwyl2022-cloud/cranium-kernel) |
-| Evidence / attestation | [`cranium-synapse`](https://github.com/worthwyl2022-cloud/cranium-synapse) |
-| Cognitive proposal | [`cranium-ai`](https://github.com/worthwyl2022-cloud/cranium-ai) |
-| Commander / operator surface | [`cranium-ultra-platform`](https://github.com/worthwyl2022-cloud/cranium-ultra-platform) |
-| Verification / diligence | [`cranium-diligence-workbench`](https://github.com/worthwyl2022-cloud/cranium-diligence-workbench) |
-| Appliance delivery | [`cranium-boot-drive`](https://github.com/worthwyl2022-cloud/cranium-boot-drive) |
-| Acquisition demonstration | [`cranium-acquisition-demo-drive`](https://github.com/worthwyl2022-cloud/cranium-acquisition-demo-drive) |
-| Historical lineage | [`cranium-archive`](https://github.com/worthwyl2022-cloud/cranium-archive) |
-
-## Cranium Commander Boundary
-
-**Cranium Commander is the operational control surface, not the canonical authority source.**
-
-Commander may present system state, construct proposals, orchestrate governed workflows, submit authority requests, and participate in runtime safety and continuity. It does not create canonical authority, replace the Kernel, redefine constitutional truth, or become an independent system of record.
-
-The production Commander/operator implementation is mapped through `worthwyl2022-cloud/cranium-ultra-platform`.
-
-The governing distinction is:
-
-> **Cognition may come from anywhere. Authority comes only through Cranium.**
-
-## Public Evidence Status
-
-This binder distinguishes **Verified**, **Self-attested**, **Pending**, **Designed, not implemented**, **Partially implemented**, and **Not claimed** material. Public architecture descriptions are not treated as independent verification merely because they are documented here.
-
-Private credentials, keys, sensitive media, private contracts, and unsupported production/security claims remain outside this public surface.
+**Truth above all.** The goal is not to make every status look green. The goal is to make every claim traceable, every gap visible, and every boundary understandable.

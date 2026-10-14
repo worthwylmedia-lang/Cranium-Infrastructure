@@ -1,0 +1,91 @@
+name: Documentation validation
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - ".github/workflows/documentation-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - ".github/workflows/documentation-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-docs:
+    name: Validate Markdown changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check whitespace errors
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          if [ -n "$BASE_SHA" ] && git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+            git diff --check "$BASE_SHA...$HEAD_SHA"
+          else
+            git diff --check HEAD^ HEAD
+          fi
+
+      - name: Check changed Markdown relative links
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+          import subprocess
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+
+          base = os.environ.get("BASE_SHA", "")
+          head = os.environ.get("HEAD_SHA", "HEAD")
+          valid_base = bool(base) and subprocess.run(
+              ["git", "cat-file", "-e", f"{base}^{{commit}}"],
+              check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+          ).returncode == 0
+          if valid_base:
+              changed = subprocess.run(
+                  ["git", "diff", "--name-only", "--diff-filter=ACMR", f"{base}...{head}"],
+                  check=True, text=True, capture_output=True,
+              ).stdout.splitlines()
+          else:
+              changed = subprocess.run(
+                  ["git", "diff", "--name-only", "--diff-filter=ACMR", "HEAD^", "HEAD"],
+                  check=True, text=True, capture_output=True,
+              ).stdout.splitlines()
+
+          markdown = [Path(p) for p in changed if p.lower().endswith(".md") and Path(p).is_file()]
+          link_pattern = re.compile(r"!?(?:\[[^\]]*\])\((?:<([^>]+)>|([^\s)]+))(?:\s+[^)]*)?\)")
+          errors = []
+          for file in markdown:
+              body = file.read_text(encoding="utf-8", errors="replace")
+              for match in link_pattern.finditer(body):
+                  raw = match.group(1) or match.group(2) or ""
+                  target = unquote(raw.split("#", 1)[0].split("?", 1)[0])
+                  if not target or target.startswith(("#", "/", "\\")):
+                      continue
+                  parsed = urlsplit(target)
+                  if parsed.scheme or parsed.netloc:
+                      continue
+                  candidate = (file.parent / target).resolve()
+                  if candidate.exists():
+                      continue
+                  if candidate.is_dir() and (candidate / "README.md").exists():
+                      continue
+                  line = body.count("\n", 0, match.start()) + 1
+                  errors.append(f"{file}:{line}: missing relative link target: {target}")
+          if errors:
+              print("\n".join(errors))
+              raise SystemExit(1)
+          print(f"Validated relative links in {len(markdown)} changed Markdown file(s).")
+          PY
